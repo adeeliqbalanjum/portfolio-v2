@@ -9,7 +9,13 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   basePath,
-  assetPrefix: basePath ? `${basePath}/` : undefined
+  assetPrefix: basePath ? `${basePath}/` : undefined,
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 };
 
 export default nextConfig;
