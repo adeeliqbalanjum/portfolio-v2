@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-v2",
+  "name": "muhammad-adeel-iqbal-premium-portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,16 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "gsap": "3.12.5",
-    "lenis": "1.1.20",
-    "next": "14.2.16",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "typescript": "5.6.3"
+    "@react-three/fiber": "latest",
+    "gsap": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "three": "latest"
   },
   "devDependencies": {
-    "@types/node": "22.7.5",
-    "@types/react": "18.3.11",
-    "@types/react-dom": "18.3.1"
+    "eslint": "latest",
+    "eslint-config-next": "latest"
   }
 }

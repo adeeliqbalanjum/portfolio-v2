@@ -1,4 +1,4 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.BASE_PATH || '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,15 +7,8 @@ const nextConfig = {
     unoptimized: true
   },
   trailingSlash: true,
-  reactStrictMode: true,
   basePath,
   assetPrefix: basePath ? `${basePath}/` : undefined,
-  typescript: {
-    ignoreBuildErrors: true
-  },
-  eslint: {
-    ignoreDuringBuilds: true
-  }
 };
 
 export default nextConfig;
