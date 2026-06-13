@@ -33,15 +33,12 @@ export default function Hero() {
   return (
     <section className="hero-section" id="hero" ref={heroRef}>
       <div className="hero-noise" aria-hidden="true" />
-      <div className="ambient ambient-one" aria-hidden="true" />
-      <div className="ambient ambient-two" aria-hidden="true" />
-      <div className="ambient ambient-three" aria-hidden="true" />
       <div className="container hero-grid">
         <div className="hero-copy">
           <div className="status-pill" data-hero-reveal>
             <span></span> Available for freelance projects
           </div>
-          <h1 data-hero-reveal><span>{site.headline}</span></h1>
+          <h1 data-hero-reveal>{site.headline}</h1>
           <p className="hero-lead" data-hero-reveal>
             {site.subheadline}
           </p>
@@ -58,7 +55,7 @@ export default function Hero() {
           <div className="hero-mini-proof" data-hero-reveal>
             <span>3+ years experience</span>
             <span>50+ projects delivered</span>
-            <span>Premium GSAP motion</span>
+            <span>6s → under 2s optimization</span>
           </div>
         </div>
 
@@ -66,7 +63,7 @@ export default function Hero() {
           <HeroScene />
           <div className="hero-glass-card hero-card-top">
             <small>Selected stack</small>
-            <strong>WordPress · WooCommerce · GSAP · Three.js</strong>
+            <strong>WordPress · WooCommerce · Next.js · GSAP</strong>
           </div>
           <div className="hero-glass-card hero-card-bottom">
             <small>Specialized in</small>

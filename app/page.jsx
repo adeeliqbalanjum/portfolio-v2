@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import StatsBar from '@/components/StatsBar';
 import SelectedWork from '@/components/SelectedWork';
 import Services from '@/components/Services';
-import MotionStory from '@/components/MotionStory';
 import Process from '@/components/Process';
 import About from '@/components/About';
 import TechStack from '@/components/TechStack';
@@ -18,7 +17,6 @@ export default function Home() {
       <Header />
       <Hero />
       <StatsBar />
-      <MotionStory />
       <SelectedWork />
       <Services />
       <Process />

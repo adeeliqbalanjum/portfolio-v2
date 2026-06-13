@@ -143,17 +143,3 @@ Resume PDF:
 ```text
 public/docs/muhammad-adeel-iqbal-resume.pdf
 ```
-
-## Nudge-style premium motion update
-
-This version adds a calmer premium visual system inspired by clean product websites:
-
-- Soft cream / sage / orange gradient backgrounds
-- Floating ambient background layers
-- Stronger GSAP reveal animations
-- Scroll parallax on project screenshots
-- Hover tilt and magnetic CTA interactions
-- New motion-story section
-- Cleaner hero copy and premium product-style spacing
-
-Deploy the same way: upload the contents of this folder to the GitHub repo root and wait for GitHub Actions.

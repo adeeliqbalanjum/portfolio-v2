@@ -8,7 +8,6 @@ import { asset, site } from '@/lib/site';
 
 const navItems = [
   { label: 'Work', href: '/#work' },
-  { label: 'Motion', href: '/#motion' },
   { label: 'Services', href: '/#services' },
   { label: 'Process', href: '/#process' },
   { label: 'About', href: '/#about' },
@@ -153,7 +152,7 @@ export default function Header() {
               <span className="mega-title">Available for freelance work</span>
               <p>
                 Premium WordPress websites, WooCommerce stores, booking systems, performance fixes,
-                conversion-focused redesigns, and premium GSAP motion experiences.
+                and conversion-focused redesigns.
               </p>
               <div className="mega-contact-actions">
                 <a href={`mailto:${site.email}`}>Email</a>
