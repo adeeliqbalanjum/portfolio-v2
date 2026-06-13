@@ -1,5 +1,4 @@
 import './globals.css';
-import './hero-fixes.css';
 import { site } from '@/lib/site';
 
 export const metadata = {
@@ -44,28 +43,10 @@ export const metadata = {
   }
 };
 
-const themeInitScript = `
-(function () {
-  try {
-    var saved = localStorage.getItem('portfolio-theme');
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var theme = saved === 'dark' || saved === 'light' ? saved : (prefersDark ? 'dark' : 'light');
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.style.colorScheme = theme;
-  } catch (error) {
-    document.documentElement.dataset.theme = 'light';
-    document.documentElement.style.colorScheme = 'light';
-  }
-})();
-`;
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

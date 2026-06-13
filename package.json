@@ -13,8 +13,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "three": "latest",
-    "lenis": "latest"
+    "three": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
