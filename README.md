@@ -1,19 +1,10 @@
-# Muhammad Adeel Iqbal — Premium Portfolio
+# Muhammad Adeel Iqbal — Digitalists-inspired Portfolio
 
-A premium freelance portfolio built for client acquisition.
+A premium Next.js portfolio for Muhammad Adeel Iqbal, redesigned around the interaction model of digital agency websites: orange preloader, compact glass navigation, full-screen menu, search overlay, oversized typography, pinned horizontal case studies, project index, contact form, and static GitHub Pages deployment.
 
-## Built with
+This is an original build using Adeel's content, projects, screenshots, and copy. It is inspired by the structure and motion direction of modern agency sites, not a direct asset/code copy.
 
-- Next.js static export
-- HTML/CSS/JavaScript
-- GSAP animations
-- Three.js hero visual
-- Digitalists-inspired premium header behavior
-- Static case-study pages
-- GitHub Pages deployment workflow
-- FormSubmit contact form
-
-## Local setup
+## Run locally
 
 ```bash
 npm install
@@ -26,93 +17,27 @@ Open:
 http://localhost:3000
 ```
 
-## Build static site
+## Deploy
 
-```bash
-npm run build
-```
-
-The static site is exported to:
-
-```text
-out/
-```
-
-## GitHub Pages deployment
-
-This project includes:
+This repo includes:
 
 ```text
 .github/workflows/deploy.yml
 ```
 
-For the repository `adeeliqbalanjum/Portfolio`, the workflow uses:
+GitHub Pages settings:
 
 ```text
-BASE_PATH=/Portfolio
-NEXT_PUBLIC_BASE_PATH=/Portfolio
+Settings → Pages → Source → GitHub Actions
 ```
 
-After pushing to GitHub:
-
-1. Go to your GitHub repository.
-2. Open **Settings**.
-3. Go to **Pages**.
-4. Under **Build and deployment**, choose **GitHub Actions**.
-5. Push to the `main` branch.
-6. Wait for the Actions workflow to finish.
-
-Your site should be available at:
+Live URL:
 
 ```text
 https://adeeliqbalanjum.github.io/Portfolio/
 ```
 
-## Case-study pages
-
-Every project in `data/projects.js` automatically generates a static case-study page:
-
-```text
-/projects/griffin-it/
-/projects/desert-safari-dubai/
-/projects/artisan-technologies/
-```
-
-To add a new case study, add a new object to:
-
-```text
-data/projects.js
-```
-
-Required fields:
-
-```text
-slug, title, industry, category, role, stack, summary, result, challenge, solution, outcome, highlights, liveUrl
-```
-
-## Contact form
-
-The contact form posts to FormSubmit:
-
-```text
-https://formsubmit.co/adeeliqbalajum@gmail.com
-```
-
-Important: the first form submission may send a confirmation email to activate FormSubmit for this inbox. After activation, inquiries will arrive directly in the email inbox.
-
-To replace with another service, edit:
-
-```text
-lib/site.js
-```
-
-and change:
-
-```js
-formEndpoint
-```
-
-## Editing content
+## Edit content
 
 Project data:
 
@@ -120,40 +45,14 @@ Project data:
 data/projects.js
 ```
 
-Services, process, and tech stack:
+Services/process/tech stack:
 
 ```text
 data/services.js
 ```
 
-Main brand/contact settings:
+Contact and brand settings:
 
 ```text
 lib/site.js
 ```
-
-Project images:
-
-```text
-public/images/projects/
-```
-
-Resume PDF:
-
-```text
-public/docs/muhammad-adeel-iqbal-resume.pdf
-```
-
-## Nudge-style premium motion update
-
-This version adds a calmer premium visual system inspired by clean product websites:
-
-- Soft cream / sage / orange gradient backgrounds
-- Floating ambient background layers
-- Stronger GSAP reveal animations
-- Scroll parallax on project screenshots
-- Hover tilt and magnetic CTA interactions
-- New motion-story section
-- Cleaner hero copy and premium product-style spacing
-
-Deploy the same way: upload the contents of this folder to the GitHub repo root and wait for GitHub Actions.
