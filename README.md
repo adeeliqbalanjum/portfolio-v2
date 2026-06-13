@@ -1,19 +1,21 @@
-# Muhammad Adeel Iqbal — Premium Portfolio
+# Muhammad Adeel Iqbal — Premium WordPress Portfolio
 
-A premium freelance portfolio built for client acquisition.
+A premium Next.js portfolio for Muhammad Adeel Iqbal, redesigned with a Digitalists-inspired layout and interaction direction while keeping Adeel's own visual identity: iCloud-style soft gradients, orange/black/cream color system, glassmorphism cards, Inter typography, rounded buttons, project content, screenshots, and contact details.
 
-## Built with
+## What changed
 
-- Next.js static export
-- HTML/CSS/JavaScript
-- GSAP animations
-- Three.js hero visual
-- Digitalists-inspired premium header behavior
-- Static case-study pages
-- GitHub Pages deployment workflow
-- FormSubmit contact form
+- Floating pill header with glass blur, light/dark mode toggle, search overlay, Start button, and full-screen animated menu
+- Orange preloader, top scroll progress, Lenis smooth scrolling, GSAP + ScrollTrigger reveals
+- Rebuilt editorial hero with project mockup, floating labels, clean copy hierarchy, and mobile-safe wrapping
+- Premium services section with sticky sidebar, 50+ Projects metric, and glass service cards
+- Large stacked selected-work case-study cards with animated screenshots and clear CTAs
+- Digitalists-style project index with hover previews
+- Polished process, about, and contact sections
+- Persistent light/dark mode using `localStorage`, with system-theme fallback on first visit
+- Responsive layouts for desktop, tablet, and mobile
+- GitHub Pages static export support with `/Portfolio` basePath via the existing workflow
 
-## Local setup
+## Run locally
 
 ```bash
 npm install
@@ -26,93 +28,33 @@ Open:
 http://localhost:3000
 ```
 
-## Build static site
+## Build
 
 ```bash
 npm run build
 ```
 
-The static site is exported to:
+## Deploy to GitHub Pages
 
-```text
-out/
-```
-
-## GitHub Pages deployment
-
-This project includes:
+The repo includes:
 
 ```text
 .github/workflows/deploy.yml
 ```
 
-For the repository `adeeliqbalanjum/Portfolio`, the workflow uses:
+GitHub Pages settings:
 
 ```text
-BASE_PATH=/Portfolio
-NEXT_PUBLIC_BASE_PATH=/Portfolio
+Settings → Pages → Source → GitHub Actions
 ```
 
-After pushing to GitHub:
-
-1. Go to your GitHub repository.
-2. Open **Settings**.
-3. Go to **Pages**.
-4. Under **Build and deployment**, choose **GitHub Actions**.
-5. Push to the `main` branch.
-6. Wait for the Actions workflow to finish.
-
-Your site should be available at:
+Live URL:
 
 ```text
 https://adeeliqbalanjum.github.io/Portfolio/
 ```
 
-## Case-study pages
-
-Every project in `data/projects.js` automatically generates a static case-study page:
-
-```text
-/projects/griffin-it/
-/projects/desert-safari-dubai/
-/projects/artisan-technologies/
-```
-
-To add a new case study, add a new object to:
-
-```text
-data/projects.js
-```
-
-Required fields:
-
-```text
-slug, title, industry, category, role, stack, summary, result, challenge, solution, outcome, highlights, liveUrl
-```
-
-## Contact form
-
-The contact form posts to FormSubmit:
-
-```text
-https://formsubmit.co/adeeliqbalajum@gmail.com
-```
-
-Important: the first form submission may send a confirmation email to activate FormSubmit for this inbox. After activation, inquiries will arrive directly in the email inbox.
-
-To replace with another service, edit:
-
-```text
-lib/site.js
-```
-
-and change:
-
-```js
-formEndpoint
-```
-
-## Editing content
+## Edit content
 
 Project data:
 
@@ -120,26 +62,14 @@ Project data:
 data/projects.js
 ```
 
-Services, process, and tech stack:
+Services/process/tech stack:
 
 ```text
 data/services.js
 ```
 
-Main brand/contact settings:
+Contact, resume, and brand settings:
 
 ```text
 lib/site.js
-```
-
-Project images:
-
-```text
-public/images/projects/
-```
-
-Resume PDF:
-
-```text
-public/docs/muhammad-adeel-iqbal-resume.pdf
 ```
