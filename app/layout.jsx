@@ -1,4 +1,5 @@
 import './globals.css';
+import './real3d.css';
 import { site } from '@/lib/site';
 
 export const metadata = {
