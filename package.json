@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-three/drei": "latest",
     "@react-three/fiber": "latest",
+    "@splinetool/react-spline": "latest",
     "gsap": "latest",
+    "lenis": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
