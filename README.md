@@ -1,6 +1,6 @@
 # Muhammad Adeel Iqbal — Premium WordPress Portfolio
 
-A premium Next.js portfolio for Muhammad Adeel Iqbal, redesigned with a Digitalists-inspired layout and interaction direction while keeping Adeel's own visual identity: iCloud-style soft gradients, orange/black/cream color system, glassmorphism cards, system UI typography, rounded buttons, project content, screenshots, and contact details.
+A premium Next.js portfolio for Muhammad Adeel Iqbal, redesigned with a Digitalists-inspired layout and interaction direction while keeping Adeel's own visual identity: iCloud-style soft gradients, orange/black/cream color system, glassmorphism cards, Inter typography, rounded buttons, project content, screenshots, and contact details.
 
 ## What changed
 
@@ -73,8 +73,3 @@ Contact, resume, and brand settings:
 ```text
 lib/site.js
 ```
-
-
-## System font update
-
-The site now uses the browser/system UI font stack shown in DevTools instead of loading Inter from Google Fonts. This keeps the portfolio faster, cleaner, and closer to the default Tailwind-style `font-sans` rendering.
