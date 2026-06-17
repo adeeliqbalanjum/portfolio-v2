@@ -1,8 +1,19 @@
-# Muhammad Adeel Iqbal — Digitalists-inspired Portfolio
+# Muhammad Adeel Iqbal — Premium WordPress Portfolio
 
-A premium Next.js portfolio for Muhammad Adeel Iqbal, redesigned around the interaction model of digital agency websites: orange preloader, compact glass navigation, full-screen menu, search overlay, oversized typography, pinned horizontal case studies, project index, contact form, and static GitHub Pages deployment.
+A premium Next.js portfolio for Muhammad Adeel Iqbal, redesigned with a Digitalists-inspired layout and interaction direction while keeping Adeel's own visual identity: iCloud-style soft gradients, orange/black/cream color system, glassmorphism cards, system UI typography, rounded buttons, project content, screenshots, and contact details.
 
-This is an original build using Adeel's content, projects, screenshots, and copy. It is inspired by the structure and motion direction of modern agency sites, not a direct asset/code copy.
+## What changed
+
+- Floating pill header with glass blur, light/dark mode toggle, search overlay, Start button, and full-screen animated menu
+- Orange preloader, top scroll progress, Lenis smooth scrolling, GSAP + ScrollTrigger reveals, and scrubbed project container-scroll motion
+- Rebuilt editorial hero with project mockup, floating labels, clean copy hierarchy, and mobile-safe wrapping
+- Premium services section with sticky sidebar, 50+ Projects metric, and glass service cards
+- Aceternity/21st.dev-style project container-scroll showcase: screenshots rotate in 3D, scale, and settle on scroll with clear CTAs
+- Digitalists-style project index with hover previews
+- Polished process, about, and contact sections
+- Persistent light/dark mode using `localStorage`, with system-theme fallback on first visit
+- Responsive layouts for desktop, tablet, and mobile
+- GitHub Pages static export support with `/Portfolio` basePath via the existing workflow
 
 ## Run locally
 
@@ -17,9 +28,15 @@ Open:
 http://localhost:3000
 ```
 
-## Deploy
+## Build
 
-This repo includes:
+```bash
+npm run build
+```
+
+## Deploy to GitHub Pages
+
+The repo includes:
 
 ```text
 .github/workflows/deploy.yml
@@ -51,8 +68,13 @@ Services/process/tech stack:
 data/services.js
 ```
 
-Contact and brand settings:
+Contact, resume, and brand settings:
 
 ```text
 lib/site.js
 ```
+
+
+## System font update
+
+The site now uses the browser/system UI font stack shown in DevTools instead of loading Inter from Google Fonts. This keeps the portfolio faster, cleaner, and closer to the default Tailwind-style `font-sans` rendering.
