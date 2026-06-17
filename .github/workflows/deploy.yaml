@@ -29,20 +29,15 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Fix CSS import order
+      - name: Normalize CSS font import
         run: |
           node - <<'NODE'
           const fs = require('fs');
           const file = 'app/globals.css';
           const css = fs.readFileSync(file, 'utf8');
-          const importRe = /@import\s+url\(['"]https:\/\/fonts\.googleapis\.com\/css2\?family=Inter:[^;]+;\s*/g;
-          let seen = false;
-          const fixed = css.replace(importRe, (match) => {
-            if (seen) return '';
-            seen = true;
-            return match.endsWith('\n') ? match : `${match}\n`;
-          });
-          fs.writeFileSync(file, fixed);
+          const importLine = "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');\n\n";
+          const withoutFontImports = css.replace(/@import\s+url\(['"]https:\/\/fonts\.googleapis\.com\/css2\?family=Inter:[\s\S]*?display=swap['"]\);\s*/g, '');
+          fs.writeFileSync(file, importLine + withoutFontImports.trimStart());
           NODE
 
       - name: Build static site
