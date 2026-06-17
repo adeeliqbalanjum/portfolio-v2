@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
@@ -36,8 +36,22 @@ jobs:
           const file = 'app/globals.css';
           const css = fs.readFileSync(file, 'utf8');
           const importLine = "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');\n\n";
-          const withoutFontImports = css.replace(/@import\s+url\(['"]https:\/\/fonts\.googleapis\.com\/css2\?family=Inter:[\s\S]*?display=swap['"]\);\s*/g, '');
-          fs.writeFileSync(file, importLine + withoutFontImports.trimStart());
+          const lines = css.split(/\r?\n/);
+          const kept = [];
+          let skippingImport = false;
+          for (const line of lines) {
+            const startsFontImport = line.includes('@import') && line.includes('fonts.googleapis.com/css2?family=Inter');
+            if (startsFontImport) {
+              skippingImport = !line.includes(');');
+              continue;
+            }
+            if (skippingImport) {
+              if (line.includes(');')) skippingImport = false;
+              continue;
+            }
+            kept.push(line);
+          }
+          fs.writeFileSync(file, importLine + kept.join('\n').trimStart());
           NODE
 
       - name: Build static site
